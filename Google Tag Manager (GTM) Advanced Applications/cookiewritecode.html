@@ -1,0 +1,13 @@
+ <script>
+	var cookieName = "GTMTest"; //vame of the cookie
+	var cookieValue = "1"; //value of the cookie
+	var expirationDays = "1"//expiration time in days
+	var expirationMilliseconds = expirationDays*24*60*60*1000; //Converts expirationtime to milliseconds
+
+	var d = new Date();
+	d.setTime(d.getTime() + expirationMilliseconds); //Sets expiration time (current time + one day)
+
+	var cookieExpireDate = d.toUTCString(); //Converts milliseconds to UTC time string
+
+	document.cookie = cookieName+"="+cookieValue+"; expires="+cookieExpireDate+"; path=/; domain=." + location.hostname.replace(/^www\./i, ""); //Sets cookie for all subdomains 
+</script>

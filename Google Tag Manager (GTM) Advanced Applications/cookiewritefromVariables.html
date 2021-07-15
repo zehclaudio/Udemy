@@ -1,0 +1,20 @@
+<script>
+	var cookieName1 = "utmCampaign"; //name of the cookie1
+	var cookieValue1 = {{utmCampaign}} //value of the cookie1
+	var cookieName2 = "utmMedium"; //name of the cookie2
+	var cookieValue2 = {{utmMedium}} //value of the cookie2
+	var cookieName3 = "utmSource"; //name of the cookie3
+	var cookieValue3 = {{utmSource}} //value of the cookie3
+
+	if(cookieValue1 !== null && cookieValue1 !== '') {
+		var expirationDays = "1"// expiration time in days
+		var expirationMilliseconds = expirationDays*24*60*60*1000; //Converts expirationtime to milliseconds
+		var d = new Date(); 
+		d.setTime(d.getTime() + expirationMilliseconds); //Sets expiration time (current time + one day)
+		var cookieExpireDate = d.toUTCString(); //Converts milliseconds to UTC time string
+		//Set all three cookies
+		document.cookie = cookieName1+"="+cookieValue1+"; expires="+cookieExpireDate+"; path=/; domain=." + location.hostname.replace(/^www\./i, ""); //Sets cookie for all subdomains
+		document.cookie = cookieName2+"="+cookieValue2+"; expires="+cookieExpireDate+"; path=/; domain=." + location.hostname.replace(/^www\./i, ""); //Sets cookie for all subdomains
+		document.cookie = cookieName3+"="+cookieValue3+"; expires="+cookieExpireDate+"; path=/; domain=." + location.hostname.replace(/^www\./i, ""); //Sets cookie for all subdomains
+	}
+</script>
