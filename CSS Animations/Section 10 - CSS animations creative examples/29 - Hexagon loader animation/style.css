@@ -1,0 +1,87 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  align-items: center;
+  background-color: #212121;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+}
+
+.line {
+  animation: animate-line 2s linear infinite;
+  border-bottom: 4px solid white;
+  position: relative;
+  width: 300px;
+}
+
+.hexagon {
+  animation: animate-hexagon 2s linear infinite;
+  background-color: white;
+  bottom: 14px;
+  height: 30px;
+  left: 0;
+  position: absolute;
+  width: 50px;
+}
+
+.hexagon::before {
+  background-color: white;
+  content: '';
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transform: rotate(60deg);
+  width: 100%;
+}
+
+.hexagon::after {
+  background-color: white;
+  content: '';
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transform: rotate(-60deg);
+  width: 100%;
+}
+
+@keyframes animate-hexagon {
+  0% {
+    left: 0;
+  }
+
+  50% {
+    left: calc(100% - 50px);
+    transform: rotate(720deg);
+  }
+
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes animate-line {
+  0% {
+    transform: rotate(-30deg);
+  }
+
+  25% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(30deg);
+  }
+
+  75% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(-30deg);
+  }
+}

@@ -1,0 +1,40 @@
+body {
+  align-items: center;
+  animation: bg-change 10s linear infinite;
+  display: flex;
+  font-family: 'Lato', sans-serif;
+  justify-content: center;
+}
+
+h1 {
+  color: white;
+  font-size: 70px;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+@keyframes bg-change {
+  0% {
+    background-color: #272727;
+  }
+
+  20% {
+    background-color: blue;
+  }
+
+  40% {
+    background-color: tomato;
+  }
+
+  60% {
+    background-color: lightblue;
+  }
+
+  80% {
+    background-color: darkgreen;
+  }
+
+  100% {
+    background-color: #272727;
+  }
+}

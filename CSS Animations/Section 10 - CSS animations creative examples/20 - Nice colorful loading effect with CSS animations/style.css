@@ -1,0 +1,79 @@
+body {
+  align-items: center;
+  background-color: #ee5253;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.loader {
+  height: 150px;
+  position: relative;
+  width: 150px;
+}
+
+span {
+  animation: chase 2s linear infinite;
+  background-color: white;
+  border-radius: 4px;
+  height: 50px;
+  position: absolute;
+  width: 50px;
+}
+
+span:nth-child(2) {
+  animation-delay: 0.7s;
+}
+
+span:nth-child(3) {
+  animation-delay: 1.4s;
+}
+
+@keyframes chase {
+  0% {
+    left: 0;
+    top: 0;
+  }
+
+  12.5% {
+    left: 50%;
+    top: 0;
+  }
+
+  25% {
+    left: 50%;
+    top: 0;
+  }
+
+  37.5% {
+    left: 50%;
+    top: 50%;
+  }
+
+  50% {
+    left: 50%;
+    top: 50%;
+  }
+
+  62.5% {
+    left: 0;
+    top: 50%;
+  }
+
+  75% {
+    left: 0;
+    top: 50%;
+  }
+
+  87.5% {
+    left: 0;
+    top: 0;
+  }
+
+  100% {
+    left: 0;
+    top: 0;
+  }
+}

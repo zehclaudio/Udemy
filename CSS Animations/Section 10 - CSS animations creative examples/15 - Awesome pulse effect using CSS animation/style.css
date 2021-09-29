@@ -1,0 +1,54 @@
+body {
+  align-items: center;
+  background-color: #212121;
+  display: flex;
+  font-family: sans-serif;
+  height: 100vh;
+  justify-content: center;
+  margin: 0;
+}
+
+.pulse {
+  background-color: #58ea00;
+  border-radius: 50%;
+  color: white;
+  font-size: 48px;
+  height: 100px;
+  line-height: 100px;
+  position: relative;
+  text-align: center;
+  width: 100px;
+}
+
+.pulse::before, .pulse::after {
+  animation: pulsing 1.5s linear infinite;
+  border: 1px solid #58ea00;
+  border-radius: 50%;
+  bottom: -20px;
+  content: '';
+  left: -20px;
+  position: absolute;
+  right: -20px;
+  top: -20px;
+}
+
+.pulse::after {
+  animation-delay: 0.5s;
+}
+
+@keyframes pulsing {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+
+  50% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+}

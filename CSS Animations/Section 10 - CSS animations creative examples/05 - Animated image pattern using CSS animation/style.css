@@ -1,0 +1,19 @@
+body {
+  margin: 0;
+}
+
+.banner {
+  animation: animated-pattern 15s linear infinite alternate;
+  background: url(bg.png);
+  background-position: 0 0;
+  height: 100vh;
+}
+
+@keyframes animated-pattern {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 100vh;
+  }
+}
