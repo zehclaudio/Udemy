@@ -1,0 +1,44 @@
+body {
+  align-items: center;
+  background-color: #222;
+  display: flex;
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  justify-content: center;
+}
+
+a {
+  height: 60px;
+  position: relative;
+  width: 180px;
+}
+
+a span {
+  background-color: #4834d4;
+  color: #fff;
+  font-size: 22px;
+  height: 100%;
+  left: 0;
+  letter-spacing: 2px;
+  line-height: 60px;
+  position: absolute;
+  text-align: center;
+  text-transform: uppercase;
+  top: 0;
+  width: 100%;
+}
+
+span:nth-child(2) {
+  background-color: #fff;
+  clip-path: polygon(60% 0, 100% 0%, 100% 100%, 60% 100%, 35% 50%);
+  color: #4834d4;
+  transition: 0.5s;
+}
+
+span:nth-child(2):hover {
+  clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%, 0 50%);
+}
+
+span:nth-child(1):hover ~ span {
+  clip-path: polygon(100% 0, 100% 0%, 100% 100%, 100% 100%, 100% 50%);
+}

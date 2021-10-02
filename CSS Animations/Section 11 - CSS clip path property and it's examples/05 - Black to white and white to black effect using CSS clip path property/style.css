@@ -1,0 +1,47 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  align-items: center;
+  background-color: #c8d6e5;
+  display: flex;
+  font-family: 'Raleway', Arial, Helvetica, sans-serif;
+  height: 100vh;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  position: relative;
+  width: 800px;
+}
+
+h1 {
+  font-size: 220px;
+  left: 50%;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  text-align: center;
+  text-transform: uppercase;
+  top: 0;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+h1:nth-child(2) {
+  background-color: #c8d6e5;
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0% 100%);
+  color: white;
+  transition: 0.5s;
+}
+
+h1:nth-child(2):hover {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+h1:nth-child(1):hover ~ h1 {
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}

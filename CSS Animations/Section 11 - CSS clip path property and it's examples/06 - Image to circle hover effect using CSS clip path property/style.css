@@ -1,0 +1,78 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  align-items: center;
+  background-color: #fff;
+  display: flex;
+  font-family: 'Raleway', Arial, Helvetica, sans-serif;
+  height: 100vh;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.card {
+  height: 500px;
+  position: relative;
+  width: 335px;
+}
+
+.card:hover .img {
+  clip-path: circle(15.0% at 50% 35%);
+}
+
+.img {
+  clip-path: circle(70.7% at 50% 50%);
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transition: all 0.5s;
+  width: 100%;
+}
+
+img {
+  width: 100%;
+}
+
+.content {
+  bottom: 50px;
+  left: 0;
+  position: absolute;
+  text-align: center;
+}
+
+h2 {
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+}
+
+p {
+  font-size: 16px;
+  margin-bottom: 25px;
+  text-transform: capitalize;
+}
+
+a {
+  background-color: black;
+  color: white;
+  display: inline-block;
+  padding: 5px 10px;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+h2, p, a {
+  opacity: 0;
+  transition: 0.3s;
+  transform: translateY(20px);
+}
+
+.card:hover h2, .card:hover p, .card:hover a {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.5s;
+}

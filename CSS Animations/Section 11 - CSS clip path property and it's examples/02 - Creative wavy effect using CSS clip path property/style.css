@@ -1,0 +1,50 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  align-items: center;
+  background-color: #2f2f2f;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.wave {
+  height: 500px;
+  position: relative;
+  width: 500px;
+}
+
+h2 {
+  font-size: 170px;
+  position: absolute;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+h2:nth-child(1) {
+  color: transparent;
+  -webkit-text-stroke: 2px #03a9f4;
+}
+
+h2:nth-child(2) {
+  animation: wave 2s linear infinite;
+  color: #03a9f4;
+}
+
+@keyframes wave {
+  0% {
+    clip-path: polygon(0% 29%, 20% 46%, 43% 52%, 62% 63%, 83% 73%, 100% 67%, 100% 100%, 0% 100%);
+  }
+
+  50% {
+    clip-path: polygon(0% 60%, 26% 68%, 49% 60%, 64% 55%, 82% 49%, 100% 57%, 100% 100%, 0% 100%);
+  }
+
+  100% {
+    clip-path: polygon(0% 29%, 20% 46%, 43% 52%, 62% 63%, 83% 73%, 100% 67%, 100% 100%, 0% 100%);
+  }
+}

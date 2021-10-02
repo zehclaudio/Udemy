@@ -1,0 +1,90 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500,800);
+
+body {
+  align-items: center;
+  background-color: rgb(236, 236, 236);
+  display: flex;
+  font-family: 'Raleway', Arial, sans-serif;
+  height: 100vh;
+  justify-content: center;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  margin: 10px 0;
+  overflow: hidden;
+  position: relative;
+}
+
+a {
+  color: transparent;
+  display: block;
+  font-size: 60px;
+  font-weight: 900;
+  margin: 0;
+  padding: 5px 10px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.5s;
+}
+
+a::before {
+  box-sizing: border-box;
+  clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+  color: #262626;
+  content: attr(data-text);
+  left: 0;
+  padding: 5px 0;
+  position: absolute;
+  top: 0;
+  transition: 0.5s;
+  transition-delay: 0.25s;
+  width: 100%;
+}
+
+a::after {
+  box-sizing: border-box;
+  clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
+  color: #262626;
+  content: attr(data-text);
+  left: 0;
+  padding: 5px 0;
+  position: absolute;
+  top: 0;
+  transition: 0.5s;
+  transition-delay: 0.25s;
+  width: 100%;
+}
+
+a:hover::before {
+  color: rgb(160, 0, 0);
+  transform: translate(10px, -3px);
+}
+
+a:hover::after {
+  color: rgb(160, 0, 0);
+  transform: translate(-10px, 3px);
+}
+
+li::before {
+  background-color: #262626;
+  content: '';
+  height: 1px;
+  left: -100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: 0.5s;
+  width: 100%;
+}
+
+li:hover::before {
+  left: 100%;
+}
